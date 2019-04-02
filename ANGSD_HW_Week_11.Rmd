@@ -15,13 +15,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Jain, Miten, et al. "The Oxford Nanopore MinION: delivery of nanopore sequencing to the genomics community." Genome biology 17.1 (2016): 239.
 
-https://nanoporetech.com/how-it-works/types-of-nanopores
+Jain, Miten, et al. "Nanopore sequencing and assembly of a human genome with ultra-long reads." Nature biotechnology 36.4 (2018): 338.
 
-https://www.nature.com/articles/nbt.4060
+Karamitros, Timokratis, and Gkikas Magiorkinis. "A novel method for the multiplexed target enrichment of MinION next generation sequencing libraries using PCR-generated baits." Nucleic acids research 43.22 (2015): e152-e152.
+
+https://nanoporetech.com/how-it-works/types-of-nanopores
 
 https://nanoporetech.com/products/promethion
 
-Karamitros, Timokratis, and Gkikas Magiorkinis. "A novel method for the multiplexed target enrichment of MinION next generation sequencing libraries using PCR-generated baits." Nucleic acids research 43.22 (2015): e152-e152.
+https://nanoporetech.com/resource-centre/versatile-sequencing-library-preparation-methods-minion-gridion-and-promethion
 
 #####In one sentence, summarize the principle of Nanopore sequencing.
 
@@ -61,9 +63,11 @@ DNA helicases are especially fit for this protein, as:
   
 #####There are three types of adapters that are ligated to the DNA prior to sequencing. Explain their functions
 
-Biotin adapters - ligate to PCR baits to allow for targetted enrichment, as the adapters will all the targeted sequences to be captured by streptavidin beads and isolated prior to PCR. 
+Biotin adapters - ligate to PCR baits to allow for targetted enrichment, as the adapters will all the targeted sequences to be captured by streptavidin beads and isolated prior to PCR. Only used in PCR-based library prep. 
 
-PCR adapters - ligate to sheared DNA and allow for subsequent amplification via PCR.
+PCR adapters - ligate to sheared DNA and allow for subsequent amplification via PCR. Only used in PCR-based library prep. 
+
+Transposase adapters - transposase cleaves template sequence and attaches barcoded tags to cleaved ends. 
 
 MioION sequencing adapters - These adpaters carry the motor proteins to the nanopore and allow for subsequent undwinding of DNA (if double-stranded)
 
@@ -81,7 +85,7 @@ Advantages:
 
 - Epigenetic such as methylation modifcations preserved (and in future detected)
 
-- Choose read lengths
+- Can choose/manipulate read lengths
 
 Disadvantgaes: 
 
@@ -104,3 +108,7 @@ scp -r ptg4001@aristotle.med.cornell.edu:hw_11_fastqc .
 ```
 
 #####Describe 2 observations that seem very different when compared to FastQC results of Illumina-based runs.
+
+- Sequence length: The sequence lengths of the MinION FastQC results range between the 100s to upwards of 50k, while the average sequence lengths of Illumina-based runs are only be 50-100 bases. 
+
+- Per base sequence qualities: Illumina-based runs show much higher average per base sequence quality scores (around 36) as compared to the MinION run FastQC scores (around 22 on average)

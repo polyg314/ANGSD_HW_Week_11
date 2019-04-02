@@ -200,10 +200,11 @@ $(document).ready(function () {
 <h4>1. Explain basic principles of Nanopore sequencing.</h4>
 <p><strong>Find peer-reviewed information about the Nanopore sequencing technique as employed by Oxford Nanopore Technologies (ideally including at least one describing the MinION technology in detail). Cite the references you found useful to address the following questions (0.5 pts for the citations alone)</strong></p>
 <p>Jain, Miten, et al. “The Oxford Nanopore MinION: delivery of nanopore sequencing to the genomics community.” Genome biology 17.1 (2016): 239.</p>
-<p><a href="https://nanoporetech.com/how-it-works/types-of-nanopores" class="uri">https://nanoporetech.com/how-it-works/types-of-nanopores</a></p>
-<p><a href="https://www.nature.com/articles/nbt.4060" class="uri">https://www.nature.com/articles/nbt.4060</a></p>
-<p><a href="https://nanoporetech.com/products/promethion" class="uri">https://nanoporetech.com/products/promethion</a></p>
+<p>Jain, Miten, et al. “Nanopore sequencing and assembly of a human genome with ultra-long reads.” Nature biotechnology 36.4 (2018): 338.</p>
 <p>Karamitros, Timokratis, and Gkikas Magiorkinis. “A novel method for the multiplexed target enrichment of MinION next generation sequencing libraries using PCR-generated baits.” Nucleic acids research 43.22 (2015): e152-e152.</p>
+<p><a href="https://nanoporetech.com/how-it-works/types-of-nanopores" class="uri">https://nanoporetech.com/how-it-works/types-of-nanopores</a></p>
+<p><a href="https://nanoporetech.com/products/promethion" class="uri">https://nanoporetech.com/products/promethion</a></p>
+<p><a href="https://nanoporetech.com/resource-centre/versatile-sequencing-library-preparation-methods-minion-gridion-and-promethion" class="uri">https://nanoporetech.com/resource-centre/versatile-sequencing-library-preparation-methods-minion-gridion-and-promethion</a></p>
 <div id="in-one-sentence-summarize-the-principle-of-nanopore-sequencing." class="section level5">
 <h5>In one sentence, summarize the principle of Nanopore sequencing.</h5>
 <p>The principle of Nanopore sequencing is to determine DNA and RNA sequences by passing an ionic current through nanopores, fixed in a membrane, and measuring the current changes to determine sequence as the biological molecules pass through the nanopore.</p>
@@ -239,8 +240,9 @@ $(document).ready(function () {
 </div>
 <div id="there-are-three-types-of-adapters-that-are-ligated-to-the-dna-prior-to-sequencing.-explain-their-functions" class="section level5">
 <h5>There are three types of adapters that are ligated to the DNA prior to sequencing. Explain their functions</h5>
-<p>Biotin adapters - ligate to PCR baits to allow for targetted enrichment, as the adapters will all the targeted sequences to be captured by streptavidin beads and isolated prior to PCR.</p>
-<p>PCR adapters - ligate to sheared DNA and allow for subsequent amplification via PCR.</p>
+<p>Biotin adapters - ligate to PCR baits to allow for targetted enrichment, as the adapters will all the targeted sequences to be captured by streptavidin beads and isolated prior to PCR. Only used in PCR-based library prep.</p>
+<p>PCR adapters - ligate to sheared DNA and allow for subsequent amplification via PCR. Only used in PCR-based library prep.</p>
+<p>Transposase adapters - transposase cleaves template sequence and attaches barcoded tags to cleaved ends.</p>
 <p>MioION sequencing adapters - These adpaters carry the motor proteins to the nanopore and allow for subsequent undwinding of DNA (if double-stranded)</p>
 </div>
 </div>
@@ -253,7 +255,7 @@ $(document).ready(function () {
 <li><p>Easily transported</p></li>
 <li><p>Low machine cost</p></li>
 <li><p>Epigenetic such as methylation modifcations preserved (and in future detected)</p></li>
-<li><p>Choose read lengths</p></li>
+<li><p>Can choose/manipulate read lengths</p></li>
 </ul>
 <p>Disadvantgaes:</p>
 <ul>
@@ -273,6 +275,10 @@ scp -r ptg4001@aristotle.med.cornell.edu:hw_11_fastqc .</code></pre>
 </div>
 <div id="describe-2-observations-that-seem-very-different-when-compared-to-fastqc-results-of-illumina-based-runs." class="section level5">
 <h5>Describe 2 observations that seem very different when compared to FastQC results of Illumina-based runs.</h5>
+<ul>
+<li><p>Sequence length: The sequence lengths of the MinION FastQC results range between the 100s to upwards of 50k, while the average sequence lengths of Illumina-based runs are only be 50-100 bases.</p></li>
+<li><p>Per base sequence qualities: Illumina-based runs show much higher average per base sequence quality scores (around 36) as compared to the MinION run FastQC scores (around 22 on average)</p></li>
+</ul>
 </div>
 </div>
 
