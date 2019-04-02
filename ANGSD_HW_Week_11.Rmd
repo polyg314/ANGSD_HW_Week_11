@@ -91,3 +91,16 @@ Disadvantgaes:
 
 - 92-97% accuracy for single reads. However, opposed to Illumina, regions of DNA will often produce errors around similar sequences, making certain regions of genome difficult to obtain accurate consensus on. 
 
+####3. Basic QC
+
+#####Run FastQC on the Nanopore fastq files in this folder: /home/frd2007/ANGSD_2019/nanopore_seq/guppy_out/.
+
+To carry this out, and then download output onto my personal computer, I ran the following code (first line on farina, the second in a directory on my computer): 
+
+```{}
+fastqc /home/frd2007/ANGSD_2019/nanopore_seq/guppy_out/*.gz --extract -o .
+
+scp -r ptg4001@aristotle.med.cornell.edu:hw_11_fastqc .
+```
+
+#####Describe 2 observations that seem very different when compared to FastQC results of Illumina-based runs.

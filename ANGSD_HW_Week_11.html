@@ -262,6 +262,19 @@ $(document).ready(function () {
 <li><p>92-97% accuracy for single reads. However, opposed to Illumina, regions of DNA will often produce errors around similar sequences, making certain regions of genome difficult to obtain accurate consensus on.</p></li>
 </ul>
 </div>
+<div id="basic-qc" class="section level4">
+<h4>3. Basic QC</h4>
+<div id="run-fastqc-on-the-nanopore-fastq-files-in-this-folder-homefrd2007angsd_2019nanopore_seqguppy_out." class="section level5">
+<h5>Run FastQC on the Nanopore fastq files in this folder: /home/frd2007/ANGSD_2019/nanopore_seq/guppy_out/.</h5>
+<p>To carry this out, and then download output onto my personal computer, I ran the following code (first line on farina, the second in a directory on my computer):</p>
+<pre><code>fastqc /home/frd2007/ANGSD_2019/nanopore_seq/guppy_out/*.gz --extract -o .
+
+scp -r ptg4001@aristotle.med.cornell.edu:hw_11_fastqc .</code></pre>
+</div>
+<div id="describe-2-observations-that-seem-very-different-when-compared-to-fastqc-results-of-illumina-based-runs." class="section level5">
+<h5>Describe 2 observations that seem very different when compared to FastQC results of Illumina-based runs.</h5>
+</div>
+</div>
 
 
 
